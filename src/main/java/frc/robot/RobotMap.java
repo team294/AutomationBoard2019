@@ -16,4 +16,6 @@ package frc.robot;
 public class RobotMap {
   // CAN addresses
   public static final int leftDrive = 10;
+  public static final int rightDrive = 20;
+  public static final int talon = 40;
 }

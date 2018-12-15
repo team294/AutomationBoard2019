@@ -21,6 +21,7 @@ public class DriveTrain extends Subsystem {
   // here. Call these from Commands.
 
   private final WPI_TalonSRX leftDrive1 = new WPI_TalonSRX(RobotMap.leftDrive);
+  private final WPI_TalonSRX rightDrive1 = new WPI_TalonSRX(RobotMap.rightDrive);
 
   public DriveTrain(){
     leftDrive1.setNeutralMode(NeutralMode.Brake);
@@ -33,6 +34,12 @@ public class DriveTrain extends Subsystem {
     if(percent > 1.0) percent = 1.0;
     if (percent <- 1.0) percent = -1.0;
     leftDrive1.set(ControlMode.PercentOutput, percent);
+  }
+  
+  public void setRightMotor(double percent){
+    if(percent > 1.0) percent = 1.0;
+    if (percent <- 1.0) percent = -1.0;
+    rightDrive1.set(ControlMode.PercentOutput, percent);
   }
 
   /**

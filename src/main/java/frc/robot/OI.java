@@ -36,6 +36,6 @@ public class OI {
     left[2].whenPressed(new SetLeftMotor(0));
 
     // green A
-    left[1].whenPressed(new SetLeftMotor(1));
+    left[1].whenPressed(new SetRightMotor(0.5));
   }
 }
